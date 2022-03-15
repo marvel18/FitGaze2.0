@@ -1,17 +1,4 @@
-window.onload = function(){
-$('#fontslider').on('change', function() {
-    console.log('input');
-    computeLines()
-      var v= $(this).val();
-      $('div').css('font-size', v + 'px');
-    });
-$('#paddingslider').on('change', function() {
-            computeLines()
-          var v= $(this).val();
-          $('div').css('line-height', v + 'px')
-        });
 $(function(){
-    console.log("computelines");
     var p = $('p'); 
     var words = p.text().split(' '); 
     var text = ''; 
@@ -31,9 +18,25 @@ $(function(){
         } 
         word.attr('class', 'line' + line); 
       });
-      
     }
-    $(window).resize();
+    computeLines();
+    $('#fontslider').on('change', function() {
+        console.log('input');
+        computeLines()
+          var v= $(this).val();
+          $('div').css('font-size', v + 'px');
+        });
+    $('#paddingslider').on('change', function() {
+                computeLines()
+              var v= $(this).val();
+              $('div').css('line-height', v + 'px')
+            });
+    $(window).resize(computeLines);
+    window.addEventListener('click',(event) =>{
+        console.log("xcoords"+event.pageX);
+        elem = document.elementFromPoint(event.pageX,event.pageY);
+        elem.style.color = 'blue';
+    });
   });
-$(window).resize(computeLines);
-}
+  
+  
