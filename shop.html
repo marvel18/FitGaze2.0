@@ -7,7 +7,7 @@
 	<meta name="description" content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
 
 	<!-- title -->
-	<title>Contact</title>
+	<title>Library</title>
 
 	<!-- favicon -->
 	<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
@@ -64,7 +64,7 @@
 								</li>
 								
 								<li><a href="about.html">About</a></li>
-								<li  class="current-list-item"><a href="contact.html">Contact</a></li>
+								<li><a href="contact.html">Contact</a></li>
 								<li><a href="publi.html">Publications</a>
 								</li>
 								<li>
@@ -83,15 +83,14 @@
 	<!-- end header -->
 
 	
-	
 	<!-- breadcrumb-section -->
 	<div class="breadcrumb-section breadcrumb-bg">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="breadcrumb-text">
-						<p>Get 24/7 Support</p>
-						<h1>Contact us</h1>
+						<p>Infinite Stories</p>
+						<h1>The Library</h1>
 					</div>
 				</div>
 			</div>
@@ -99,52 +98,91 @@
 	</div>
 	<!-- end breadcrumb section -->
 
-	<!-- contact form -->
-	<div class="contact-from-section mt-150 mb-150">
+	<!-- products -->
+	<div class="product-section mt-150 mb-150">
 		<div class="container">
+
 			<div class="row">
-				<div class="col-lg-8 mb-5 mb-lg-0">
-					<div class="form-title">
-						<h2>Submit your Queries</h2>
-						
-					</div>
-				 	<div id="form_status"></div>
-					<div class="contact-form">
-						<form type="POST" id="fruitkha-contact" onSubmit="return valid_datas( this );">
-							<p>
-								<input type="text" placeholder="Name" name="name" id="name">
-								<input type="email" placeholder="Email" name="email" id="email">
-							</p>
-							<p>
-								<input type="tel" placeholder="Phone" name="phone" id="phone">
-								<input type="text" placeholder="Subject" name="subject" id="subject">
-							</p>
-							<p><textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea></p>
-							<input type="hidden" name="token" value="FsWga4&@f6aw" />
-							<p><input type="submit" value="Submit"></p>
-						</form>
+                <div class="col-md-12">
+                    <div class="product-filters">
+                        <ul>
+                            <li class="active" data-filter="*">All</li>
+                            <li data-filter=".strawberry">Kids</li>
+                            <li data-filter=".berry">Fiction</li>
+                            <li data-filter=".lemon">Non-Fiction</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+			<div class="row product-lists">
+				<div class="col-lg-4 col-md-6 text-center">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="custom.html"><img src="assets/img/products/product-img-5.jpg" alt=""></a>
+						</div>
+						<h3>Enter your own custom text</h3>
+						<a href="custom.html" class="cart-btn">Click Here</a>
 					</div>
 				</div>
-				<div class="col-lg-4">
-					<div class="contact-form-wrap">
-						<div class="contact-form-box">
-							<h4><i class="fas fa-map"></i>Address</h4>
-							<p>FISAT, Hormis Nagar, Mookkannoor <br> Angamaly,Kerala <br> 683577</p>
+				<div class="col-lg-4 col-md-6 text-center berry">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/products/product-img-2.jpg" alt=""></a>
 						</div>
-						<div class="contact-form-box">
-							<h4><i class="fas fa-address-book"></i> Contact</h4>
-							<p>Email: klmn2022.official@gmail.com</p>
+						<h3>Harry Potter and The Cursed Child</h3>
+						<p class="product-price"><span>J.K Rowling</span></p>
+						<a href="cart.html" class="cart-btn">Click Here</a>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 text-center lemon">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/products/product-img-4.jpg" alt=""></a>
 						</div>
+						<h3>I Am Malala</h3>
+						<p class="product-price"><span>Malala Yousafzai</span></p>
+						<a href="cart.html" class="cart-btn">Click Here</a>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 text-center strawberry">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/products/product-img-1.jpg" alt=""></a>
+						</div>
+						<h3>Charlie and The Chocolate Factory</h3>
+						<p class="product-price"><span>Roald Dahl</span></p>
+						<a href="cart.html" class="cart-btn">Click Here</a>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 text-center strawberry">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/products/product-img-6.jpg" alt=""></a>
+						</div>
+						<h3>Diary of a Wimpy Kid</h3>
+						<p class="product-price"><span>Jeff Kinney</span></p>
+						<a href="cart.html" class="cart-btn">Click Here</a>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 text-center berry">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/products/product-img-3.jpg" alt=""></a>
+						</div>
+						<h3>The Lord Of The Rings</h3>
+						<p class="product-price"><span>J.R.R Tolkien</span></p>
+						<a href="cart.html" class="cart-btn">Click Here</a>
 					</div>
 				</div>
 			</div>
+
+			
 		</div>
 	</div>
-	<!-- end contact form -->
+	<!-- end products -->
 
 	
-
-
 
 	<!-- footer -->
 	<div class="footer-area">
@@ -153,7 +191,7 @@
 				<div class="col-lg-3 col-md-6">
 					<div class="footer-box about-widget">
 						<h2 class="widget-title">About us</h2>
-						<p>We are a team of 4 and are final year students of B.tech CSE Department, FISAT, Angamaly.</p>
+						<p>We are a team of 4 and are final year students of B.tech CSE Department, FISAT, Angamaly. </p>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6">
@@ -182,7 +220,7 @@
 	</div>
 	<!-- end footer -->
 	
-	
+
 	
 	<!-- jquery -->
 	<script src="assets/js/jquery-1.11.3.min.js"></script>
@@ -202,10 +240,8 @@
 	<script src="assets/js/jquery.meanmenu.min.js"></script>
 	<!-- sticker js -->
 	<script src="assets/js/sticker.js"></script>
-	<!-- form validation js -->
-	<script src="assets/js/form-validate.js"></script>
 	<!-- main js -->
 	<script src="assets/js/main.js"></script>
-	
+
 </body>
 </html>
