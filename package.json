@@ -1,0 +1,23 @@
+{
+  "name": "fitgaze2-0",
+  "version": "1.0.0",
+  "description": "This app track eyes to analyse the reading behavior",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/KLMN-FIT/FitGaze2-0.git"
+  },
+  "author": "KLMN",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/KLMN-FIT/FitGaze2-0/issues"
+  },
+  "homepage": "https://gitlab.com/KLMN-FIT/FitGaze2-0#readme",
+  "dependencies": {
+    "express": "^4.18.0",
+    "ws": "^8.6.0"
+  }
+}

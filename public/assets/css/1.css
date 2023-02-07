@@ -1,0 +1,530 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color:#ffffff;
+  --main-color-dark: #000107;
+  --main-color-light: #616166;
+  --text-color: #0c0c0c;
+  --background: #aaabb375;
+  --card-color:#f7eeee;
+}
+.lines{
+  display: inline-block;
+}
+
+/* #word{
+  background-color: red;
+} */
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+  overflow-x: hidden;
+  background-color: var(--background);
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+  
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+nav {
+  position: sticky;
+  padding: 1.8rem 0.85rem;
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.5s ease-in-out;
+}
+
+
+.menu{
+  
+  padding: 1.8rem 0.85rem;
+  top: 20px;
+  left: 20px;
+  width: 14rem;
+  border-radius: 20px;
+  background-color: var(--main-color);
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+  border-radius: 20px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.sidebar-top {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-top .logo {
+  width: 2.1rem;
+  margin: 0 0.8rem;
+}
+
+.sidebar-top h3 {
+  padding-left: 0.5rem;
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+
+/* .shrink-btn {
+  position: absolute;
+  top: 50%;
+  height: 27px;
+  padding: 0 0.3rem;
+  background-color: var(--main-color);
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 3px 10px -3px rgba(70, 46, 118, 0.3);
+  right: -2.65rem;
+  transform: translateY(-50%) translateX(-8px);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.shrink-btn i {
+  line-height: 27px;
+  transition: 0.3s;
+}
+
+.shrink-btn:hover {
+  background-color: var(--main-color-dark);
+}
+
+nav:hover .shrink-btn,
+.shrink-btn.hovered {
+  transform: translateY(-50%) translateX(0px);
+  opacity: 1;
+  pointer-events: all;
+} */
+
+
+.sidebar-links ul {
+  position: relative;
+}
+
+.sidebar-links li {
+  position: relative;
+  padding: 2.5px 0;
+}
+
+.sidebar-links a {
+  color: var(--text-color);
+  font-weight: 400;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  height: 53px;
+}
+
+.icon {
+  font-size: 1.3rem;
+  text-align: center;
+  min-width: 3.7rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.icon i {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  transition: 0.3s;
+}
+
+
+.sidebar-links a.active,
+.sidebar-links a:hover {
+  color: rgb(118, 95, 247);
+}
+
+.sidebar-links a .link {
+  transition: opacity 0.3s 0.2s, color 0.3s;
+}
+
+.sidebar-links a.active i:first-child {
+  opacity: 0;
+}
+
+.sidebar-links a.active i:last-child {
+  opacity: 1;
+}
+
+.active-tab {
+  width: 100%;
+  height: 53px;
+  background-color: var(--main-color-dark);
+  border-radius: 10px;
+  position: absolute;
+  top: 2.5px;
+  left: 0;
+  transition: top 0.3s;
+}
+
+.sidebar-links h4 {
+  position: relative;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 0 0.8rem;
+  color: var(--text-color);
+  letter-spacing: 0.5px;
+  height: 45px;
+  line-height: 45px;
+  transition: opacity 0.3s 0.2s, height 0.5s 0s;
+}
+
+.sidebar-footer {
+  position: relative;
+  margin-top: auto;
+}
+
+
+/* When the menu shrinks */
+
+.hide {
+  transition: opacity 0.3s 0.2s;
+}
+
+
+
+
+
+.card {
+  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  padding-right: 10px;
+  line-height: 100px;
+  font-size: 20px;
+  margin-right: 2rem;
+  background-color: var(--main-color);
+
+  border-radius: 10px;
+}
+
+.eyetracksetting {
+  text-align: left;
+  font-size: 17px;
+}
+
+.modal-container {
+  opacity: 0;
+  background-color: rgba(0, 0,0,0.3);
+  display: flex;
+  pointer-events: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  }
+
+.modal-container.show{
+  transition: opacity 0.4s 0.2s, height 0.5s 0s;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 30px 50px;
+  width: 600px;
+  max-width: 100%;
+
+}
+
+.modal h1{
+  margin: 0;
+}
+
+.modal p{
+  font-size: 14px;
+}
+
+.modal-container2 {
+  opacity: 0;
+  background-color: rgba(0, 0,0,0.3);
+  display: flex;
+  pointer-events: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  }
+
+.modal-container2.show{
+  transition: opacity 0.4s 0.2s, height 0.5s 0s;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal2 {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 30px 50px;
+  width: 600px;
+  max-width: 100%;
+
+}
+
+.modal2 h1{
+  margin: 0;
+}
+
+.modal2 p{
+  font-size: 14px;
+}
+
+.button-7 {
+  background-color: #0095ff;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px .8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.button-7:hover,
+.button-7:focus {
+  background-color: #07c;
+}
+
+.button-7:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+}
+
+.button-7:active {
+  background-color: #0064bd;
+  box-shadow: none;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 20px;
+}
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 30px;
+  height: 20px;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 1px;
+  bottom: 1px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+
+
+.slider.on {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+.slider.on:before {
+  -webkit-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+}
+
+.slider.round {
+  border-radius: 20px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}  
+
+
+html {
+  scroll-behavior:smooth;
+}
+
+
+.loader {
+  display: none;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1111;
+  opacity: 90%;
+  background: rgba(62, 67, 122, 0.496);
+  overflow-x: hidden;
+}
+
+.loader-inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  height: 50px;
+  width: 50px;
+}
+
+.circle {
+  width: 8vmax;
+  height: 8vmax;
+  border-right: 4px solid #000;
+  border-radius: 50%;
+  -webkit-animation: spinRight 800ms linear infinite;
+  animation: spinRight 800ms linear infinite;
+}
+
+.circle:before {
+  content: '';
+  width: 6vmax;
+  height: 6vmax;
+  display: block;
+  position: absolute;
+  top: calc(50% - 3vmax);
+  left: calc(50% - 3vmax);
+  border-left: 3px solid #F28123;
+  border-radius: 100%;
+  -webkit-animation: spinLeft 800ms linear infinite;
+  animation: spinLeft 800ms linear infinite;
+}
+
+.circle:after {
+  content: '';
+  width: 6vmax;
+  height: 6vmax;
+  display: block;
+  position: absolute;
+  top: calc(50% - 3vmax);
+  left: calc(50% - 3vmax);
+  border-left: 3px solid #F28123;
+  border-radius: 100%;
+  -webkit-animation: spinLeft 800ms linear infinite;
+  animation: spinLeft 800ms linear infinite;
+  width: 4vmax;
+  height: 4vmax;
+  top: calc(50% - 2vmax);
+  left: calc(50% - 2vmax);
+  border: 0;
+  border-right: 2px solid #000;
+  -webkit-animation: none;
+  animation: none;
+}
+
+@-webkit-keyframes spinLeft {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(720deg);
+    transform: rotate(720deg);
+  }
+}
+
+@keyframes spinLeft {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(720deg);
+    transform: rotate(720deg);
+  }
+}
+
+@-webkit-keyframes spinRight {
+  from {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes spinRight {
+  from {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
